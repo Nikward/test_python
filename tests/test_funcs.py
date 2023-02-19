@@ -1,7 +1,7 @@
 import pytest
 
 from main import get_vis_russia, geo_logs
-from main import get_unique_values, ids
+from main import get_unique_values
 
 
 @pytest.mark.parametrize('geo_logs, expected_res', [(geo_logs, 'Россия')])
