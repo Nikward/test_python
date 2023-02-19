@@ -14,4 +14,4 @@ class TestApiYa(unittest.TestCase):
 
     def test_type_folder(self):
         result = get_metatype_folder(TOKEN, 'test')
-        self.assertTrue(result == "dir")
+        self.assertTrue(result == "dir", f'Папка не появилась в списке файлов')
