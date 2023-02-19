@@ -35,6 +35,5 @@ def get_unique_values(ids):
 
 
 def name_chanel_max(stats):
-    # Напишите скрипт, который возвращает название канала с максимальным объемом.
     final = max(stats.items())
     return final[0]
