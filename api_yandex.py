@@ -7,7 +7,8 @@ URL = 'https://cloud-api.yandex.net/v1/disk/resources'
 
 def get_token_ya():
     config = configparser.ConfigParser()
-    path = os.path.abspath("setting.ini")
+    dirname = os.path.dirname(__file__)
+    path = dirname + '/setting.ini'
     config.read(path)
     token = config['yandex_api']['ya_token']
     return token
