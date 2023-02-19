@@ -10,17 +10,15 @@ geo_logs = [
     {'visit9': ['Курск', 'Россия']},
     {'visit10': ['Архангельск', 'Россия']}
 ]
+
 ids = {'user1': [213, 213, 213, 15, 213],
        'user2': [54, 54, 119, 119, 119],
        'user3': [213, 98, 98, 35]}
+
 stats = {'facebook': 55, 'yandex': 120, 'vk': 115, 'google': 99, 'email': 42, 'ok': 98}
 
 
 def get_vis_russia(geo_logs):
-    # Дан список с визитами по городам и странам.
-    # Напишите код, который возвращает отфильтрованный список geo_logs,
-    # содержащий только визиты из России."
-
     geo_logs_Russia = []
     for element in range(0, len(geo_logs)):
         if 'Россия' in list(geo_logs[element].values())[0]:
@@ -28,10 +26,7 @@ def get_vis_russia(geo_logs):
     return geo_logs_Russia
 
 
-def get_unique_alues(ids):
-    # Выведите на экран все уникальные гео-ID из значений словаря ids.
-    # Т.е. список вида [213, 15, 54, 119, 98, 35]
-
+def get_unique_values(ids):
     list_values = []
     for values in ids.values():
         list_values.append(values)
