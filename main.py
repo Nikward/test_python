@@ -35,5 +35,5 @@ def get_unique_values(ids):
 
 
 def name_chanel_max(stats):
-    final = max(stats.items())
-    return final[0]
+    final = max(stats, key=stats.get)
+    return final

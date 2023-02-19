@@ -4,6 +4,7 @@ from main import get_vis_russia, geo_logs
 from main import get_unique_values
 from main import name_chanel_max
 
+
 @pytest.mark.parametrize('geo_logs, expected_res', [(geo_logs, 'Россия')])
 def test_vis_russia(geo_logs, expected_res):
     res = get_vis_russia(geo_logs)
@@ -23,9 +24,12 @@ def test_inique_value(ids, expected_res):
     res = get_unique_values(ids)
     assert res == expected_res
 
+
 @pytest.mark.parametrize('stats, expected_res', [
     ({'facebook': 55, 'yandex': 120, 'vk': 115, 'google': 99, 'email': 42, 'ok': 98}, 'yandex'),
-    ({'facebook': 88, 'yandex': 169, 'vk': 115, 'google': 100, 'email': 42, 'ok': 543}, "ok")
+    ({'facebook': 88, 'yandex': 169, 'vk': 115, 'google': 100, 'email': 42, 'ok': 543}, "ok"),
+    ({'facebook': 600, 'yandex': 344, 'vk': 115, 'google': 100, 'email': 42, 'ok': 543}, "facebook"),
+    ({'facebook': 88, 'yandex': 169, 'vk': 700, 'google': 100, 'email': 42, 'ok': 543}, "vk")
 ])
 def test_max_chanell(stats, expected_res):
     res = name_chanel_max(stats)
